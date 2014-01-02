@@ -24,24 +24,27 @@ end lowerCase
 
 display dialog "Starting EmailSmurfer
 
-What mailbox use?
+Which input?
     - For \"All mailboxes\": will take time
-    - For \"Current mailbox\": select a message before" buttons Â
-	{"All mailboxes", "Current mailbox"} default button 2
+    - For \"Selected messages\"" buttons Â
+	{"All mailboxes", "Selected messages"} default button 2
 
 if button returned of result is "All mailboxes" then
 	set myInput to "all"
 else
-	set myInput to "current"
+	set myInput to "selected"
 end if
 
 tell application "Mail"
-	set selectionMessage to selection
-	set thisMessage to item 1 of selectionMessage
 	if myInput is "all" then
 		set allSenders to sender of every message in mailboxes
 	else
-		set allSenders to sender of every message in mailbox of thisMessage
+		set arrayAllSenders to {}
+		set selectionMessage to selection
+		repeat with i from 1 to (count selectionMessage)
+			set end of arrayAllSenders to sender of item i of selectionMessage
+		end repeat
+		set allSenders to arrayAllSenders
 	end if
 end tell
 
