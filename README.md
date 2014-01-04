@@ -27,7 +27,7 @@ You can chose between two kind of input:
 * Parsing all mailboxes (will take time)
 * Parsing selected messages
 
-That's it! You can open the result in the 'output.csv' file in your home directory.
+That's it! You can open the result in the 'output.csv' file in your documents directory (~/documents).
 
 
 # License
