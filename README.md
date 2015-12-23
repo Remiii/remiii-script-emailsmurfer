@@ -14,13 +14,20 @@ EmailSmurfer - Extract email addresses from email header on Apple Mail (OSX)
 
 ```
 
+# Requirments
+
+* Apple OSX 10 (tested on Maverick and El Capitan)
+* Apple Mail
+
+
 # Executable application
 
 Executable application is available in the 'bin' folder
 
+
 # How to use
 
-Execute application and follow instructions.<br />
+Execute application (you need to allow app from an unidentified developer) and follow instructions.<br />
 
 You can chose between two kind of input:
 
@@ -31,8 +38,10 @@ That's it! You can open the result in the 'output.csv' file in your documents di
 
 
 # License
+
 remiii-script-emailsmurfer is licensed under the MIT license (see LICENSE.md file)
 
+
 # Author
-@Remiii
+Rémi Barbe (aka @Remiii)
 
